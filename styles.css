@@ -4,7 +4,7 @@
 }
 /*All Header*/
 header{
-    background-image: url(media/herocropped.jpg);
+    background-image: url(/media/herocropped.jpg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -80,6 +80,13 @@ nav li:last-of-type{
     align-items: center;
     padding: 1rem;
 }
+
+.open{
+    background-color: rgba(41, 41, 41, 0.77);
+    transition: 0;
+    padding: 1.5rem 0;
+    border-radius: 5px;
+}
 /* ^All Header^ */
 /*Main styles*/
 main h1{
@@ -146,10 +153,14 @@ main h1{
 @media screen and (max-width:698px){
     nav ul{
         flex-direction: column;
+        padding-bottom: 0;  
     }
     .nav-link{
-        padding: 0.5rem;
+        padding: 0.5rem 0.5rem 0 0.5rem;
         font-size: 130%;
+    }
+    .open{
+        padding: 0.5rem 0 0 0;
     }
     #hamburger{
         margin:0;
