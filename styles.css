@@ -3,7 +3,7 @@
     margin: 0;
 }
 header{
-    background-image: url(media/assets/photos/herocropped.jpg);
+    background-image: url(media/assets/herocropped.jpg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
