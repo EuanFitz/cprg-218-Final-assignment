@@ -105,6 +105,15 @@ nav li:last-of-type{
 main h1{
     display: none;
 }
+/*Temperature API*/
+.weather-heading{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 100%;
+    position: absolute;
+    top:140px;
+
+}
 /* ^All Header^ */
 /*Main styles*/
 #hero{
