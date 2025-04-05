@@ -44,3 +44,7 @@ spatoggle.addEventListener('click', function(){
     spanav.classList.toggle('active')
 });
 //make a button to close spanav when clicked 
+const spaNavActive = document.querySelectorAll('#spanav.active')
+if(spaNavActive.onClickOutside){
+    spanav.classList.toggle('active')
+};
