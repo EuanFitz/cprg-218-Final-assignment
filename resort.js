@@ -18,33 +18,135 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=hawaii&appid=76e7024c8c
     icon.alt = data.weather[0].description;
     
 });
-
-
-/*//Activity carousel
-//Next
-activitynext.addEventListener('click', function(){
-    if(activityimg.src = 'media/1.jpg'){
-        activityimg.src = 'media/2.jpg'
-        activitytype.textContent = 'Infinity Pool'
-        activitydesc.textContent = 'Relax by our stunning oceanfront infinity pool.'
-    }
-
-}); 
-//Prev
-activityback.addEventListener('click', function(){
-       if(activityimg.src = 'media/2.jpg')
-        activityimg.src= 'media/1.jpg'
-        activitytype.textContent = 'Private Beach'
-        activitydesc.textContent = 'Step onto our pristine, white-sand beach.'
-});*/
-
-//Spa button scroll
+//Spa Toggle
 spatoggle.addEventListener('click', function(){
-    spatoggle.classList.toggle('active')
     spanav.classList.toggle('active')
 });
-//make a button to close spanav when clicked 
-const spaNavActive = document.querySelectorAll('#spanav.active')
-if(spaNavActive.onClickOutside){
-    spanav.classList.toggle('active')
-};
+
+//Close menu when A is clicked
+spanav.addEventListener('click', function(event){
+    if(event.target.tagName =="A"){
+        spanav.classList.toggle('active');
+    }
+});
+
+//toggle Nav when clicked outside
+document.addEventListener('click', (event)=> {
+    if(!spanav.contains(event.target) && !spatoggle.contains(event.target) && spanav.classList.contains('active')){
+        spanav.classList.remove('active');
+    }
+});
+
+
+
+/*//Activity carousel*/
+//Next
+let slide = 1;
+next.addEventListener('click', function(){
+    if(slide==1){
+        one.classList.toggle('close')
+        two.classList.toggle('close')
+    }
+    if(slide==2){
+    two.classList.toggle('close')
+    three.classList.toggle('close')
+    }
+    if(slide==3){
+        three.classList.toggle('close')
+        four.classList.toggle('close')
+    }
+    if(slide==4){
+        four.classList.toggle('close')
+        one.classList.toggle('close')
+    }
+    if(slide==4){
+        slide=1;
+    }
+    else if(slide<4){
+        slide++;
+    }
+})
+//Prev
+prev.addEventListener('click', function(){
+    if(slide==4){
+        three.classList.toggle('close')
+        four.classList.toggle('close')
+    }
+    if(slide==3){
+        three.classList.toggle('close')
+        two.classList.toggle('close')
+    }
+    if(slide==2){
+        two.classList.toggle('close')
+        one.classList.toggle('close')
+    }
+    if(slide==1){
+        one.classList.toggle('close')
+        four.classList.toggle('close')
+    }
+    if(slide==1){
+        slide=4;
+    }
+    else if(slide>0){
+        slide--;
+    }
+});
+
+//Rooms Carousel
+roomnext.addEventListener('click', function(){
+    if(slide==1){
+        roomone.classList.toggle('close')
+        roomtwo.classList.toggle('close')
+    }
+    if(slide==2){
+        roomtwo.classList.toggle('close')
+        roomthree.classList.toggle('close')
+    }
+    if(slide==3){
+        roomthree.classList.toggle('close')
+        roomfour.classList.toggle('close')
+    }
+    if(slide==4){
+        roomfour.classList.toggle('close')
+        roomfive.classList.toggle('close')
+    }
+    if(slide==5){
+        roomfive.classList.toggle('close')
+        roomone.classList.toggle('close')
+    }
+    if(slide==5){
+        slide=1;
+    }
+    else if(slide<5){
+        slide++;
+    }
+})
+//Prev
+rooomprev.addEventListener('click', function(){
+    if(slide==1){
+        roomone.classList.toggle('close')
+        roomfive.classList.toggle('close')
+    }
+    if(slide==2){
+        roomtwo.classList.toggle('close')
+        roomoone.classList.toggle('close')
+    }
+    if(slide==3){
+        roomthree.classList.toggle('close')
+        roomtwo.classList.toggle('close')
+    }
+    if(slide==4){
+        roomfour.classList.toggle('close')
+        roomthree.classList.toggle('close')
+    }
+    if(slide==5){
+        roomfive.classList.toggle('close')
+        roomfour.classList.toggle('close')
+    }
+    if(slide==1){
+        slide=5;
+    }
+    else if(slide<0){
+        slide--;
+    }
+});
