@@ -18,28 +18,10 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=hawaii&appid=76e7024c8c
     icon.alt = data.weather[0].description;
     
 });
-//Spa Toggle
-spatoggle.addEventListener('click', function(){
-    spanav.classList.toggle('active')
-});
-
-//Close menu when A is clicked
-spanav.addEventListener('click', function(event){
-    if(event.target.tagName =="A"){
-        spanav.classList.toggle('active');
-    }
-});
-
-//toggle Nav when clicked outside
-document.addEventListener('click', (event)=> {
-    if(!spanav.contains(event.target) && !spatoggle.contains(event.target) && spanav.classList.contains('active')){
-        spanav.classList.remove('active');
-    }
-});
 
 
 
-/*//Activity carousel*/
+/*Activity carousel*/
 //Next
 let slide = 1;
 next.addEventListener('click', function(){
@@ -92,61 +74,3 @@ prev.addEventListener('click', function(){
     }
 });
 
-//Rooms Carousel
-roomnext.addEventListener('click', function(){
-    if(slide==1){
-        roomone.classList.toggle('close')
-        roomtwo.classList.toggle('close')
-    }
-    if(slide==2){
-        roomtwo.classList.toggle('close')
-        roomthree.classList.toggle('close')
-    }
-    if(slide==3){
-        roomthree.classList.toggle('close')
-        roomfour.classList.toggle('close')
-    }
-    if(slide==4){
-        roomfour.classList.toggle('close')
-        roomfive.classList.toggle('close')
-    }
-    if(slide==5){
-        roomfive.classList.toggle('close')
-        roomone.classList.toggle('close')
-    }
-    if(slide==5){
-        slide=1;
-    }
-    else if(slide<5){
-        slide++;
-    }
-})
-//Prev
-rooomprev.addEventListener('click', function(){
-    if(slide==1){
-        roomone.classList.toggle('close')
-        roomfive.classList.toggle('close')
-    }
-    if(slide==2){
-        roomtwo.classList.toggle('close')
-        roomoone.classList.toggle('close')
-    }
-    if(slide==3){
-        roomthree.classList.toggle('close')
-        roomtwo.classList.toggle('close')
-    }
-    if(slide==4){
-        roomfour.classList.toggle('close')
-        roomthree.classList.toggle('close')
-    }
-    if(slide==5){
-        roomfive.classList.toggle('close')
-        roomfour.classList.toggle('close')
-    }
-    if(slide==1){
-        slide=5;
-    }
-    else if(slide<0){
-        slide--;
-    }
-});

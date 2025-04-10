@@ -7,13 +7,16 @@
 html{
     scroll-behavior: smooth;
 }
-/*Color Palette
-#1985a1;
-#4c5c68;
-#46494c;
-#c5c3c6;
-#dcdcdd;
-*/
+
+.NOTHING{
+color: #1985a1;
+color: #4c5c68;
+color: #46494c;
+Color: #c5c3c6;
+color:#dcdcdd;
+}
+
+
 
 
 
@@ -42,7 +45,6 @@ header h1{
 
 h1{
     font-family:"Petit Formal Script", serif;
-    color: white;
 }
 #book{
     border: 0;
@@ -142,15 +144,12 @@ header nav li:last-of-type{
     padding: 1.5rem 0;
     border-radius: 5px;
 }
-main h1{
-    display: none;
-    text-align: center;
-    width: 90%;
-    margin:  auto;
-    background-color: #46494cab;
-    padding: 0.5rem 0 1rem 0;
-    border-radius: 0 0 50% 50%;
-}
+
+
+
+
+
+
 /*Temperature API*/
 .weather-heading{
     font-family: Arial, Helvetica, sans-serif;
@@ -173,6 +172,31 @@ main h1{
 
 
 /*Main styles*/
+body{
+    background-color:#46494c;
+}
+.herotext{
+    background-color: #c5c3c6;
+    text-align: center;
+    width: 85%;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+main h1{
+    display: none;
+    text-align: center;
+    width: 90%;
+    margin:  auto;
+    background-color: #c5c3c6;
+    padding: 0.5rem 0 1rem 0;
+    border-radius: 0 0 50% 50%;
+}
+
+
+
+
+
 /*Carousel*/
 #hero{
     text-align: center;
@@ -207,8 +231,6 @@ main h1{
 }
 .activityimg{
     grid-area: 1/ 1 / 6 / 15;
-    z-index: -1;
-    height: 100%;
     object-fit: cover;
 }
 .activitywords{
@@ -217,6 +239,7 @@ main h1{
     width: 70%;
     height: 65%;
     border-radius: 0 0 20px 0;
+    z-index: 1;
 }
 
 .activitynext, .activityback, .gotodesc{
@@ -233,7 +256,12 @@ main h1{
 }
 .carouselbutton{
     display: flex;
-    position:absolute;
+    width: 100%;
+    gap: 75%;
+    align-items: space-around;
+    position: absolute;
+    top: 1000px;
+    margin: 0;
 }
 
 .activitynext:hover, .activityback:hover, .gotodesc:hover{
@@ -265,10 +293,12 @@ main h1{
 }
 .roomimg{
     grid-area: 1/ 1 / 6 / 15;
-    z-index: -1;
-    width: 95%;
     margin: auto;
-    max-height: 100%
+    width:95%;
+    max-height: 100%;
+    padding: 1rem;
+    border:#4C5C68 1rem solid;
+    border-radius: 4rem;
 }
 .gotodesc{
     grid-area: 5/1/5/4;
@@ -277,6 +307,11 @@ main h1{
     text-decoration: none;
     color: white;
 }
+
+
+
+
+
 /*Home page*/
 #guestwords{
     display: flex;
@@ -311,7 +346,7 @@ margin: 5rem 0 10rem 0;
 
 
 
-/*Spa page Room page*/
+/*Spa page/ Room page*/
 #thespa{
     position: relative;
 }
@@ -375,28 +410,41 @@ margin: 5rem 0 10rem 0;
     max-width: 500px;
     object-fit: cover;
     max-width: 50%;
-    z-index: -2;
 }
 .page{
     display: flex;
     flex-direction: column;
     gap: 5rem;
 }
-
+.spatype:first-of-type {
+   margin-top: 5rem;
+}
+.spatype{
+    color:#c5c3c6
+}
 .content{
     display: flex;
     justify-content: flex-start;
     width: 90%;
     gap: 5rem;
     margin: 0 auto;
+    border-radius: 20px 0 20px 0;
+    padding: 2rem;
+    background-color: #c5c3c6;
+    border:#4C5C68 5px solid;
 }
 .contentreverse{
+    color: #c5c3c6;
     display: flex;
     justify-content: flex-start;
     flex-direction: row-reverse;
     width: 90%;
     gap: 5rem;
+    background-color: #4C5C68;
+    border:#c5c3c6 5px solid;
     margin: 0 auto;
+    padding: 2rem;
+    border-radius: 20px 0 20px 0;
 }
 
 .words{
@@ -414,6 +462,21 @@ margin: 5rem 0 10rem 0;
 
 
 
+/*Activity Page*/
+.activitysection{
+    color:#c5c3c6;
+    width: 90%;
+    gap: 5rem;
+    background-color: #4C5C68;
+    border:#c5c3c6 5px solid;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 20px 0 20px 0;
+}
+.activitysection h2{
+    margin-bottom: 1.5rem;
+}
+
 
 
 
@@ -422,7 +485,14 @@ margin: 5rem 0 10rem 0;
     header h1{
         margin-top: 30rem;
     }
-}
+    .carouselbutton{
+        align-items: space-around;
+        top: 1200px;
+        margin: 0;
+}}
+
+
+
 @media screen and (max-width:950px) {
     header h1{
         display: none;
@@ -431,6 +501,7 @@ margin: 5rem 0 10rem 0;
         display: block;
     }
     header{
+        background-image: url(media/sunsetcrop.png);
         flex-direction: column;
         align-items: center;
         height: 600px;
@@ -458,6 +529,7 @@ margin: 5rem 0 10rem 0;
         gap: 1rem; 
         padding: 0rem 0 1rem 0;
     }
+
     header nav li:first-of-type{
         margin: 0;
     }
@@ -470,13 +542,11 @@ margin: 5rem 0 10rem 0;
         display: block;
         transition: 1s;
     }
+
     #img-hamburger{
         display: flex;
     }
-    #page-seperation{
-        gap: 5rem;
-        flex-direction: column;
-    }
+
     #book{
         position: absolute;
         top: 100px;
@@ -484,11 +554,15 @@ margin: 5rem 0 10rem 0;
         right:10px;  
     }
 
-    .content{
-        display: block;
+    .centersec{
         width: 100%;
         justify-items: center;
     }
+
+    .content, .contentreverse{
+        flex-direction: column;
+    }
+
     .words{
         justify-self: flex-start;
         margin: 3rem 0 0 2rem;
