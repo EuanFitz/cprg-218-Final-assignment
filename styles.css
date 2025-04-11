@@ -8,7 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 
-.NOTHING{
+.COLORS{
 color: #1985a1;
 color: #4c5c68;
 color: #46494c;
@@ -210,12 +210,13 @@ main h1{
 .activitydesc{
     background-color:rgba(0, 0, 0, 0.334);
     border-radius: 0 0 20px 0;
-    padding:0 0 1rem 1rem;
+    padding: 0 1rem 1rem;
 
 }
 .activitytype{
     background-color:rgba(0, 0, 0, 0.334);
     padding: 1rem 0 0 1rem;
+    border-radius: 2rem 0 0 0;
 
 }
 .activities h2{ 
@@ -232,13 +233,18 @@ main h1{
 .activityimg{
     grid-area: 1/ 1 / 6 / 15;
     object-fit: cover;
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+    border:#4C5C68 1rem solid;
+    border-radius: 2rem 0 2rem 0;
 }
 .activitywords{
     grid-area: 1 / 1 / 2/ 6;
     color: white;
     width: 70%;
     height: 65%;
-    border-radius: 0 0 20px 0;
+    border-radius: 2rem 0 20px 0;
     z-index: 1;
 }
 
@@ -331,18 +337,21 @@ main h1{
     max-height: 150px;
     justify-self: center;
 }
- details summary{
+details summary{
     margin: 0 1rem 3rem 0;
     padding: 1rem;
     background-color: brown;
     cursor: pointer;
+    width: 25%
  }
 
 #roomone, #roomtwo, #roomthree, #roomfour, #roomfive{
 margin: 5rem 0 10rem 0;
 }
 
-
+#activities{
+    margin-top: 5rem;
+}
 
 
 
