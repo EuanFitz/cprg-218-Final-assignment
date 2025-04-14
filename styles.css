@@ -174,7 +174,12 @@ header nav li:last-of-type{
 /*Main styles*/
 body{
     background-color:#46494c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 .herotext{
     background-color: #c5c3c6;
     text-align: center;
@@ -183,6 +188,7 @@ body{
     padding: 1rem;
     margin: 1rem auto;
 }
+
 main h1{
     display: none;
     text-align: center;
@@ -191,6 +197,11 @@ main h1{
     background-color: #c5c3c6;
     padding: 0.5rem 0 1rem 0;
     border-radius: 0 0 50% 50%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -319,31 +330,12 @@ main h1{
 
 
 /*Home page*/
-#guestwords{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: flex-end;
-}
-.review{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 45%;
-}
 .headshot{
     grid-row: 1/3;
     border-radius: 50%;
     max-height: 150px;
     justify-self: center;
 }
-details summary{
-    margin: 0 1rem 3rem 0;
-    padding: 1rem;
-    background-color: brown;
-    cursor: pointer;
-    width: 25%
- }
 
 #roomone, #roomtwo, #roomthree, #roomfour, #roomfive{
 margin: 5rem 0 10rem 0;
@@ -351,6 +343,10 @@ margin: 5rem 0 10rem 0;
 
 #activities{
     margin-top: 5rem;
+
+}
+section{
+    margin: 2rem;
 }
 
 
@@ -420,11 +416,6 @@ margin: 5rem 0 10rem 0;
     object-fit: cover;
     max-width: 50%;
 }
-.page{
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-}
 .spatype:first-of-type {
    margin-top: 5rem;
 }
@@ -435,7 +426,6 @@ margin: 5rem 0 10rem 0;
     display: flex;
     justify-content: flex-start;
     width: 90%;
-    gap: 5rem;
     margin: 0 auto;
     border-radius: 20px 0 20px 0;
     padding: 2rem;
@@ -448,7 +438,6 @@ margin: 5rem 0 10rem 0;
     justify-content: flex-start;
     flex-direction: row-reverse;
     width: 90%;
-    gap: 5rem;
     background-color: #4C5C68;
     border:#c5c3c6 5px solid;
     margin: 0 auto;
@@ -487,6 +476,45 @@ margin: 5rem 0 10rem 0;
 }
 
 
+
+
+/*Footer*/
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #4c5c68;
+    padding: 1rem 2rem;
+    color: #c5c3c6;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footerleft{
+    align-items: flex-end;
+}
+footer ul{
+    padding: 0;
+}
+.socials li{
+    display: inline;
+}
+footer ul li{
+    list-style: none; 
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+footer ul li a:hover{
+    color: #919191;
+}
 
 
 
@@ -570,6 +598,8 @@ margin: 5rem 0 10rem 0;
 
     .content, .contentreverse{
         flex-direction: column;
+        width: 95%;
+        margin: auto;
     }
 
     .words{
@@ -582,6 +612,21 @@ margin: 5rem 0 10rem 0;
     }
     .carousel{
         width: 95%;
+    }
+    .carouselbutton{
+        width:95%;
+    }
+
+    /*Footer*/
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    footer div{
+        flex-direction: row;
+        width: 100%;
     }
 }
 
@@ -604,5 +649,8 @@ margin: 5rem 0 10rem 0;
     }
     #img-hamburger{
         position: static;
+    }
+    footer div{
+        flex-direction: column;
     }
 }

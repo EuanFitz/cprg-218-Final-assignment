@@ -29,3 +29,8 @@ https://unsplash.com/photos/man-massaging-womans-body-a9pFSC8dTlo
 
 "Hot rocks" by Engin Akyurt under Pixabay License. 
 https://unsplash.com/photos/white-and-brown-ceramic-figurine-ZbzYDboN7fg
+
+
+Footer
+All Social Media Icons by Iconfinder. Free for commercial use.
+https://www.iconfinder.com/social-media-icons

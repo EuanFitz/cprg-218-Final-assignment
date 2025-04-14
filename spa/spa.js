@@ -26,7 +26,7 @@ document.addEventListener('click', (event)=> {
 });
 
 //Weather API 
-fetch('https://api.openweathermap.org/data/2.5/weather?q=hawaii&appid=76e7024c8cdf08475411f848e7840011&units=metric')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=cancun&appid=76e7024c8cdf08475411f848e7840011&units=metric')
 .then(response => response.json())
 .then(data => {
     console.log(data);
