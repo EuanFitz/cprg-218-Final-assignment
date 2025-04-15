@@ -25,6 +25,10 @@ document.addEventListener('click', (event)=> {
     }
 });
 
+//Copyright footer
+const d = new Date();
+footerYear.textContent = d.getFullYear();
+
 //Weather API 
 fetch('https://api.openweathermap.org/data/2.5/weather?q=cancun&appid=76e7024c8cdf08475411f848e7840011&units=metric')
 .then(response => response.json())

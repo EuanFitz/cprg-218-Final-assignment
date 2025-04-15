@@ -19,7 +19,9 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=cancun&appid=76e7024c8c
     
 });
 
-
+//Copyright footer
+const d = new Date();
+footerYear.textContent = d.getFullYear();
 
 /*Activity carousel*/
 //Next

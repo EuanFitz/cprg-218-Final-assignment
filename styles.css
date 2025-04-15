@@ -180,15 +180,6 @@ body{
     justify-content: center;
 }
 
-.herotext{
-    background-color: #c5c3c6;
-    text-align: center;
-    width: 85%;
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem auto;
-}
-
 main h1{
     display: none;
     text-align: center;
@@ -215,9 +206,6 @@ main{
     display: none;
 }
 
-.activityimg{
-    max-width: 100%;
-}
 .activitydesc{
     background-color:rgba(0, 0, 0, 0.334);
     border-radius: 0 0 20px 0;
@@ -249,6 +237,7 @@ main{
     padding: 1rem;
     border:#4C5C68 1rem solid;
     border-radius: 2rem 0 2rem 0;
+    max-width: 100%;
 }
 .activitywords{
     grid-area: 1 / 1 / 2/ 6;
@@ -513,7 +502,31 @@ footer ul li a:hover{
     color: #919191;
 }
 
-
+/*HomePage Style*/
+#rooms{
+    align-self: flex-start;
+}
+#testimoni{
+    width: 100%;
+}
+#testimoni h2, #testimoni h3{
+    text-align: center;
+    background-color: #c5c3c6;
+}
+#guestwords{
+    margin: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px 300px;
+}
+.review{
+    display: flex;
+    background-color:#c5c3c6;
+    gap: 0.4rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    
+}
 
 @media screen and (min-width:1200px) {
     header h1{
@@ -613,6 +626,9 @@ footer ul li a:hover{
     .carouselbutton{
         width:95%;
     }
+    .carousel{
+        max-height: 600px;
+    }
 
     /*Footer*/
     footer{
@@ -624,6 +640,11 @@ footer ul li a:hover{
     footer div{
         flex-direction: row;
         width: 100%;
+    }
+    /*Home*/
+    #guestwords{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
