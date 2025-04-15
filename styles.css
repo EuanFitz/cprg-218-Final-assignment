@@ -22,7 +22,7 @@ color:#dcdcdd;
 
 /*All Header*/
 header{
-    background-image: url(/media/sunset.png);
+    background-image: url(media/sunset.png);
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
