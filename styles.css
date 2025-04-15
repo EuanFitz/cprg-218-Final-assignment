@@ -140,11 +140,10 @@ header nav li:last-of-type{
 
 .open{
     background-color: rgba(41, 41, 41, 0.77);
-    transition: 0;
+    transition: none;
     padding: 1.5rem 0;
     border-radius: 5px;
 }
-
 
 
 
@@ -532,12 +531,7 @@ footer ul li a:hover{
     header h1{
         margin-top: 30rem;
     }
-    .carouselbutton{
-        align-items: space-around;
-        top: 1200px;
-        margin: 0;
-}}
-
+}
 
 
 @media screen and (max-width:950px) {
@@ -622,9 +616,6 @@ footer ul li a:hover{
     }
     .carousel{
         width: 95%;
-    }
-    .carouselbutton{
-        width:95%;
     }
     .carousel{
         max-height: 600px;
