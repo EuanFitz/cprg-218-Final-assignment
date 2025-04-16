@@ -184,6 +184,7 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 1rem;
 }
 .herotext{
     width: 95%;
@@ -434,6 +435,7 @@ main{
 
 /*Activity Page*/
 .activitysection{
+    display: flex;
     color:#c5c3c6;
     width: 90%;
     gap: 5rem;
@@ -442,6 +444,11 @@ main{
     margin: 0 auto;
     padding: 2rem;
     border-radius: 20px 0 20px 0;
+}
+.activitysection img{
+    object-fit: cover;
+    max-height: 500px;
+    max-width: 50%;
 }
 .activitysection h2{
     margin-bottom: 1.5rem;
@@ -507,6 +514,7 @@ footer ul li a:hover{
 }
 #rooms a{
     text-decoration: none;
+    color: #c5c3c6;
 }
 #rooms h2{
     background-color: #46494c;
@@ -670,6 +678,10 @@ footer ul li a:hover{
     }
     .carousel{
         max-height: 600px;
+    }
+    .activitysection{
+        flex-direction: column;
+        align-items: center;
     }
 }
 
